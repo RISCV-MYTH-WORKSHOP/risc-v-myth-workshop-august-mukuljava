@@ -56,7 +56,14 @@ riscv64-unknown-elf-objdump -d unsignedhighest.o | less
 spike -d pk unsignedhighest.o
 ```
 
+**4. To decrease the number of instructions we use Ofast instead of O1 in the above command which is used to compile RISC-V:**
+```
+riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o unsignedhighest.o unsignedhighest.c
+```
+
 ![alt text](https://github.com/RISCV-MYTH-WORKSHOP/risc-v-myth-workshop-august-mukuljava/blob/master/Day%201/unsigned_highest.png)
 
 ![alt text](https://github.com/RISCV-MYTH-WORKSHOP/risc-v-myth-workshop-august-mukuljava/blob/master/Day%201/Signed_higest_lowest.png)
+
+![alt text](https://github.com/RISCV-MYTH-WORKSHOP/risc-v-myth-workshop-august-mukuljava/blob/master/Day%201/printf_subroutine.png)
 
