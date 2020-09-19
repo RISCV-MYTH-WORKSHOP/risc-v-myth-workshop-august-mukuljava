@@ -40,29 +40,23 @@ GNU Compiler is required for RISC-V and simulator. We need to set it up on Ubunt
 # Labs
 
 Testing with simple codes: Running basic C code to find unsigned highest interger
-1. To compile using RISC-V GNU compiler:
+
+**1. To compile using RISC-V GNU compiler:**
 ```
 riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o unsignedhighest.o unsignedhighest.c
 ```
 
-2. To see AL code or dissembled file:
+**2. To see AL code or dissembled file:**
 ```
-riscv64-unknown-elf-objdump -d signedhighlow.o | less
+riscv64-unknown-elf-objdump -d unsignedhighest.o | less
 ```
 
+**3. To open debugger:**
+```
+spike -d pk unsignedhighest.o
+```
 
+![alt text](https://github.com/RISCV-MYTH-WORKSHOP/risc-v-myth-workshop-august-mukuljava/blob/master/Day%201/unsigned_highest.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+![alt text](https://github.com/RISCV-MYTH-WORKSHOP/risc-v-myth-workshop-august-mukuljava/blob/master/Day%201/Signed_higest_lowest.png)
 
