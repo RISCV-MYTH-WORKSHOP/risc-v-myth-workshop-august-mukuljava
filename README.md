@@ -67,3 +67,21 @@ riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o unsignedhighest.o unsigne
 
 ![alt text](https://github.com/RISCV-MYTH-WORKSHOP/risc-v-myth-workshop-august-mukuljava/blob/master/Day%201/printf_subroutine.png)
 
+**There was also description of how to represent integer numbers and sizes**
+
+8 bits = 1 byte
+
+32 bits = 4 bytes = 1 word
+
+64 bits = 8 bytes = 2 word(double word)
+
+- Integer representation:
+
+  - Total number of patterns represented by RV64 = 2^64
+  - RISC=V 64 double words fr unsigned or positive numbers can be represented from: 0 to 2^64 - 1
+  - For all the integers:
+    - Positive numbers: 0 to 2^63-1
+    - Negative numbers: -2^63 to -1
+
+# 3. Day 2: Application Binary Interface and RISC-V specifications
+
