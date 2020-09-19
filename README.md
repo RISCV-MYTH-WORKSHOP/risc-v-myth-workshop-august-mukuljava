@@ -35,5 +35,34 @@ The various types of instructions used in RISC-V :
 
 If it includes all the above then: **RV64IMFD**
 
-GNU Compiler is required for RISC-V and simulator. We need to set it up on Ubuntu which is installed in VM Virtual Box for Windows OS. Here we installed GNU compiler and Spike Simulator.
+GNU Compiler is required for RISC-V and simulator. We need to set it up on Ubuntu which is installed in VM Virtual Box for Windows OS. Here we installed GNU compiler and Spike siulator which will be required for debugging as well.
+
+# Labs
+
+Testing with simple codes: Running basic C code to find unsigned highest interger
+1. To compile using RISC-V GNU compiler:
+```
+riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o unsignedhighest.o unsignedhighest.c
+```
+
+2. To see AL code or dissembled file:
+```
+riscv64-unknown-elf-objdump -d signedhighlow.o | less
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
