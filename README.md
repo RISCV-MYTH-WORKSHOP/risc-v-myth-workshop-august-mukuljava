@@ -4,11 +4,11 @@ An informative workshop and project on how to build Risc-V CPU core organized by
 
 # Contents
 
-[1. Introduction to RISC-V](https://github.com/RISCV-MYTH-WORKSHOP/risc-v-myth-workshop-august-mukuljava/edit/master/README.md)
+[1. Introduction to RISC-V](https://github.com/RISCV-MYTH-WORKSHOP/risc-v-myth-workshop-august-mukuljava/blob/master/README.md#1-introduction-to-risc-v)
 
-[2. Day 1: Instruction set architecture](https://github.com/RISCV-MYTH-WORKSHOP/risc-v-myth-workshop-august-mukuljava/edit/master/README.md)
+[2. Day 1: Instruction set architecture](https://github.com/RISCV-MYTH-WORKSHOP/risc-v-myth-workshop-august-mukuljava#2-day-1-instruction-set-architecture)
 
-[3. Day 2: Application Binary Interface and RISC-V specifications](https://github.com/RISCV-MYTH-WORKSHOP/risc-v-myth-workshop-august-mukuljava/edit/master/README.md)
+[3. Day 2: Application Binary Interface and RISC-V specifications](https://github.com/RISCV-MYTH-WORKSHOP/risc-v-myth-workshop-august-mukuljava#3-day-2-application-binary-interface-and-risc-v-specifications)
 
 [4. Day 3: Digital logic with TL-Verilog in Makerchip IDE](https://github.com/RISCV-MYTH-WORKSHOP/risc-v-myth-workshop-august-mukuljava/edit/master/README.md)
 
