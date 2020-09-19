@@ -83,5 +83,50 @@ riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o unsignedhighest.o unsigne
     - Positive numbers: 0 to 2^63-1
     - Negative numbers: -2^63 to -1
 
+**Data Types, there respective sizes and format specifier**
+
+| Data types | Memory | Format Specifier |
+| --- | --- | --- |
+| Unsigned int |    4   |        %u        |
+|     int    |    4   |        %d        |
+| unsigned long long int | 8 |   %llu      |
+| long long int | 8 | %lld |
+ 
 # 3. Day 2: Application Binary Interface and RISC-V specifications
 
+An application binary interface (ABI) is an interface between two binary program modules; often, one of these modules is a library or operating system facility, and the other is a program that is being run by a user. It is kind of similar to Application Program Interface(API) which provides an interaction of Application programs with standard libraries. There are two main parts of ISA: User and System ISa and User ISA. User ISA can directly interact with hardware.
+
+RISC-V can access hardware resources through 32 registers each having different specifications. These registers varies from x(0) to x(31). Length of registers can be defined through : XLEN. 
+
+-XLEN = 32 bit (RV32)
+
+-XLEN = 64 bit (RV64)
+
+There are two ways in which data can be loaded into the registers:
+1. Load data directly into registers.
+2. Load data to memory first and then to registers.
+
+RISC-V belongs to **little-endian** memory addressing system which is **byte addreseable**. Hence,
+
+Address of 1st double word = M[0]
+
+Address of 2nd double word = M[8]
+
+Address of 3rd double word = M[16]........ so on
+                 
+**Register convention**
+
+| Register | ABI Name | Usage | Saver |
+| --- | --- | --- | --- |
+| X0 | zero | Hard-wired zero | - |
+| X1 | ra | return address | caller |
+| X2 | sp | stack pointer | callee |
+| X3 | gp | global pointer | - |
+| X4 | tp | thread pointer | - |
+| X5-7 | t0-2 | temporaries | caller |
+| X8 | s0/fp | saved register/frame pointer | callee |
+| X9 | s1 | saved register |callee|
+| X10-11 | a0-1 | function arguments/return values | caller |
+| X12-17 | a2-7 | function arguments | caller |
+| X18-27 | s2-11 | saved registers | callee |
+| X28-31 | t3-6 | temporaries | callee|
