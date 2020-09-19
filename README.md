@@ -114,7 +114,7 @@ Address of 2nd double word = M[8]
 
 Address of 3rd double word = M[16]........ so on
                  
-**Register convention**
+**Register calling convention for RISC-V**
 
 | Register | ABI Name | Usage | Saver |
 | --- | --- | --- | --- |
@@ -130,3 +130,30 @@ Address of 3rd double word = M[16]........ so on
 | X12-17 | a2-7 | function arguments | caller |
 | X18-27 | s2-11 | saved registers | callee |
 | X28-31 | t3-6 | temporaries | callee|
+
+There three instructions which come under RV64I i.e base integer instructions: 
+
+-R-type: Instructions operating on registers are called R-type instructions.
+
+-I-type: Instructions operating on registers and immediate values are I-type instructions.
+
+-S-type: Used only for storing operations.
+
+5 bits are used to represent the registers. Hence:
+
+Total no. of registers = 2^5 = 32 registers
+
+Therefore 32 int registers in RISC-V architecture (0-31).
+
+# Labs
+
+**Using ABI to test while calling code 1to9_custom.c and load.S**
+
+![alt text](https://github.com/RISCV-MYTH-WORKSHOP/risc-v-myth-workshop-august-mukuljava/blob/master/Day2/sum%20of%20numbers%201to9.png)
+
+**Finding sum using RISCV using iverilog**
+
+![alt text](https://github.com/RISCV-MYTH-WORKSHOP/risc-v-myth-workshop-august-mukuljava/blob/master/Day2/Finding%20sum%20using%20RISCV%20using%20iverilog.png)
+
+
+# 4. Day 3: Digital logic with TL-Verilog in Makerchip IDE
