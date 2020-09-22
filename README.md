@@ -12,11 +12,11 @@ An informative workshop and project on how to build Risc-V CPU core organized by
 
 [4. Day 3: Digital logic with TL-Verilog in Makerchip IDE](https://github.com/RISCV-MYTH-WORKSHOP/risc-v-myth-workshop-august-mukuljava#4-day-3-digital-logic-with-tl-verilog-in-makerchip-ide)
 
-[5. Day 4: Coding a RISC-V CPU subset](https://github.com/RISCV-MYTH-WORKSHOP/risc-v-myth-workshop-august-mukuljava/edit/master/README.md)
+[5. Day 4: Coding a RISC-V CPU subset](https://github.com/RISCV-MYTH-WORKSHOP/risc-v-myth-workshop-august-mukuljava#5-day-4-coding-a-risc-v-cpu-subset)
 
-[6. Day 5: Pipelining and completing your CPU](https://github.com/RISCV-MYTH-WORKSHOP/risc-v-myth-workshop-august-mukuljava/edit/master/README.md)
+[6. Day 5: Pipelining and completing your CPU](https://github.com/RISCV-MYTH-WORKSHOP/risc-v-myth-workshop-august-mukuljava#6-day-5-pipelining-and-completing-your-cpu)
 
-[7. Acknowledgements](https://github.com/RISCV-MYTH-WORKSHOP/risc-v-myth-workshop-august-mukuljava/edit/master/README.md)
+[7. Acknowledgements](https://github.com/RISCV-MYTH-WORKSHOP/risc-v-myth-workshop-august-mukuljava#7-acknowledgements)
 
 # 1. Introduction to RISC-V
 
@@ -216,7 +216,7 @@ We tested the core using testbench to ensure that the code which we designed was
 *passed = |cpu/xreg[10]>>5$value == (1+2+3+4+5+6+7+8+9);
 ```
 
-## 6. Day 5: Pipelining and completing your CPU
+# 6. Day 5: Pipelining and completing your CPU
 
 Here comes the final day of the workshop where what we did was to piepline the CPU. Based on the water fall diagram, we provided the pipeline concept to the core. In doing so, we encuntered some hazards:
 
