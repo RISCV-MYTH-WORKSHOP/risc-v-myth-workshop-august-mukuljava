@@ -98,9 +98,9 @@ An application binary interface (ABI) is an interface between two binary program
 
 RISC-V can access hardware resources through 32 registers each having different specifications. These registers varies from x(0) to x(31). Length of registers can be defined through : XLEN. 
 
--XLEN = 32 bit (RV32)
+- XLEN = 32 bit (RV32)
 
--XLEN = 64 bit (RV64)
+- XLEN = 64 bit (RV64)
 
 There are two ways in which data can be loaded into the registers:
 1. Load data directly into registers.
@@ -133,11 +133,11 @@ Address of 3rd double word = M[16]........ so on
 
 There three instructions which come under RV64I i.e base integer instructions: 
 
--R-type: Instructions operating on registers are called R-type instructions.
+- R-type: Instructions operating on registers are called R-type instructions.
 
--I-type: Instructions operating on registers and immediate values are I-type instructions.
+- I-type: Instructions operating on registers and immediate values are I-type instructions.
 
--S-type: Used only for storing operations.
+- S-type: Used only for storing operations.
 
 5 bits are used to represent the registers. Hence:
 
