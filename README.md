@@ -168,7 +168,7 @@ An introduction to TL-Verilog was provided and some basic concepts of Digital lo
 - Easy for staging without use of Flip Flops i.e they are already implied from the context.
 - Easy debugging and automated clock gating signal is very useful.
 
-This day the most difficult day as it invloved all the basic concepts which would be used in the next two days for building thr RISC-V core. So understanding the concepts was paramount. It took a lot of time infact the whole day but it was necessary. We started off with a very simple logic of OR logic, mux, counter, fibonacci series etc and ended on two important designs which are combinational and sequential calculator.
+This day the most difficult day as it invloved all the basic concepts which would be used in the next two days for building thr RISC-V core. So understanding the concepts was paramount. It took a lot of time infact the whole day but it was necessary. We started off with a very simple logic of OR logic, mux, counter, fibonacci series etc and ended on three important designs which are combinational and sequential calculator and cycle calculator.
 
 # Labs
 
@@ -177,3 +177,65 @@ This day the most difficult day as it invloved all the basic concepts which woul
 The design of calculator where we designed the addition, subtraction, multiplication and division using 2:1 mux
 
 ![alt text](https://github.com/RISCV-MYTH-WORKSHOP/risc-v-myth-workshop-august-mukuljava/blob/master/Day3_5/combinational%20calculator.png)
+
+## Sequential Calculator:
+
+A real calculator remembers the last result, and uses it for the next calculation, so we used the sequential logic were flip flops came into the picture without specifying them (the beauty of TL-Verilog).
+
+![alt text](https://github.com/RISCV-MYTH-WORKSHOP/risc-v-myth-workshop-august-mukuljava/blob/master/Day3_5/sequential%20calculator.png)
+
+## Cycle Calculator:
+
+With the use of pipelining we designed the cycle calculator where we included both calculator as well as counter.
+
+![alt text](https://github.com/RISCV-MYTH-WORKSHOP/risc-v-myth-workshop-august-mukuljava/blob/master/Day3_5/Cycle_calculator.png)
+
+# 5. Day 4: Coding a RISC-V CPU subset
+
+Day 3 was very hectic due to the basic concepts. However, I can say that it paid off as it was the first step towards a successfull building of the core. On this day, learning was a bit fast and smooth. We learnt the basic arhcitecture of the RISC-V core and the implementation plan for the same. The plan included with:
+
+- Program Counter (Next PC, Fetch)
+- Imem-Rd (Instruction Memory)
+- Instruction Decoder
+- Register File Read
+- Arithmatic Logic Unit (ALU)
+- Register File Write
+- Branch
+
+## Instruction decoder:
+
+![alt text](https://github.com/RISCV-MYTH-WORKSHOP/risc-v-myth-workshop-august-mukuljava/blob/master/Day3_5/full_instruction%20decode.png)
+
+## After implementing all the above parameters for building a core here is the final lab of the day:
+
+![alt text](https://github.com/RISCV-MYTH-WORKSHOP/risc-v-myth-workshop-august-mukuljava/blob/master/Day3_5/implementing%20all%20the%20parameters.png)
+
+We tested the core using testbench to ensure that the code which we designed was working properly. Here is the code:
+
+```
+*passed = |cpu/xreg[10]>>5$value == (1+2+3+4+5+6+7+8+9);
+```
+
+## 6. Day 5: Pipelining and completing your CPU
+
+Here comes the final day of the workshop where what we did was to piepline the CPU. Based on the water fall diagram, we provided the pipeline concept to the core. In doing so, we encuntered some hazards:
+
+- Read follow by write
+- Branching hazard
+
+For which we resolved the issue by using register file bypass method and branching method where instead of going back 1 stage we went back 2 stages. We tested the code with the same manner as to load and store assembly language code and also imbibed JUMP method.
+
+## Final RISC-V CPU core:
+
+![alt text](https://github.com/RISCV-MYTH-WORKSHOP/risc-v-myth-workshop-august-mukuljava/blob/master/Day3_5/RISC-V%20core.png)
+
+## Jumps Solution:
+
+![alt text](https://github.com/RISCV-MYTH-WORKSHOP/risc-v-myth-workshop-august-mukuljava/blob/master/Day3_5/jumps_solution.png)
+
+# 7. Acknowledgements
+
+- [Kunal Ghosh](https://github.com/kunalg123), Co-founder (VSD Corp. Pvt. Ltd)
+- [Steve Hoover](https://github.com/stevehoover), Founder, Redwood EDA
+- [Shivam Potdar](https://github.com/shivampotdar), GSoC 2020 Student,FOSSi Foundation
+- [Vineet Jain](https://github.com/vineetjain07), GSoC 2020 Student,FOSSi Foundation
