@@ -157,3 +157,23 @@ Therefore 32 int registers in RISC-V architecture (0-31).
 
 
 # 4. Day 3: Digital logic with TL-Verilog in Makerchip IDE
+
+An introduction to TL-Verilog was provided and some basic concepts of Digital logic was brushed up. TL-Verilog stands for Transactional Level Verilog and is an updated or you can say extension of System Verilog and proves to be very efficient, bug free and easy to learn all at the same time. Using TL-Verilog for HDL implementation was very much easy and efficient. The main advantage of using TL-verilog is pipelining. It made the use of pipeline very easy without any bugs. 
+
+## PROS:
+
+- Length of the code is reduced and hence less bug prone
+- Easy to pipeling. 
+- TL-Verilog is good for architectural and synthesizable verification models. too.
+- Easy for staging without use of Flip Flops i.e they are already implied from the context.
+- Easy debugging and automated clock gating signal is very useful.
+
+This day the most difficult day as it invloved all the basic concepts which would be used in the next two days for building thr RISC-V core. So understanding the concepts was paramount. It took a lot of time infact the whole day but it was necessary. We started off with a very simple logic of OR logic, mux, counter, fibonacci series etc and ended on two important designs which are combinational and sequential calculator.
+
+# Labs
+
+## Combinational Calculator:
+
+The design of calculator where we designed the addition, subtraction, multiplication and division using 2:1 mux
+
+![alt text](https://github.com/RISCV-MYTH-WORKSHOP/risc-v-myth-workshop-august-mukuljava/blob/master/Day3_5/combinational%20calculator.png)
